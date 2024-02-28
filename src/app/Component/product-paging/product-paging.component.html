@@ -1,0 +1,15 @@
+
+    <div class="container d-flex">
+        <div class="row">
+            
+                    <div class="card col-md-3"  *ngFor="let item of prlist" style="justify-content: space-evenly;margin: 30px;">
+                        <img src="{{item.image}}" alt="image" height="250px">
+                        <h5 style="white-space: nowrap;overflow:hidden ;text-overflow:ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                        <p style="white-space: nowrap;overflow:hidden ;text-overflow:ellipsis;max-width: 100ch;">{{item.description}}</p>
+                        <p><b>Price</b><i>  ${{item.price}}</i></p>
+                        <button class="btn btn-primary" (click)="addToCart(item)">Add To Cart</button>
+                    </div>
+               
+
+        </div>
+    </div>

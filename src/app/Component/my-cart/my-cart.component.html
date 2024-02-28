@@ -1,0 +1,56 @@
+<ng-container  *ngIf="productInCart">
+    <div class="cart-table">
+        <div class="cart-product">
+            <table class =" table table-responsive " >
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                      
+                        <th>Total</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr style="justify-content: space-between;" *ngFor="let item of product">
+                        <td>Sr.No</td>
+                        <td>{{item.title}}</td>
+                        <td><img width="100px" height="100px" src="{{item.image}}" alt=""></td>
+                        <td style="max-width:150ch ;">{{item.description}}</td>
+                        <th>{{item.price}}</th>
+                        
+                        <td>Total</td>
+                        <td><button class="btn btn-danger" (click)="removeproduct(item)"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+
+                    </tbody>
+
+            </table>
+            <div class="button-container">
+                <button class="btn btn-primary me-3"  routerLink="/product">Shop Now</button>
+                <button class="btn btn-danger me-3" (click)="removerAllProduct()">Empty Cart</button>
+                <button class="btn btn-primary me-3"  routerLink="/buy">Buy Now</button>
+                
+              </div>
+              
+
+        </div>
+    </div>
+
+</ng-container>
+
+<ng-container *ngIf="cartEmpty">
+<div class="container">
+    <h5 class="card-top">My cart</h5>
+    <div class="card-center">
+        <img src="" alt="">
+        <h4>Cart is Empty</h4>
+        <h5>Add item to cart</h5>
+        <button class="btn btn-primary" routerLink="/product">Shop Now</button>
+    </div>
+</div>
+</ng-container>

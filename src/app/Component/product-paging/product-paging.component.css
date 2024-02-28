@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+  }
+  
+  .card {
+    width: 28%; /* Adjust this value according to your design needs */
+    margin-bottom: 20px; /* Adjust as needed for space between cards */
+  }
+  
+  .card img  {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .card button {
+    width: 100%;
+  }
+  
+  .card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
